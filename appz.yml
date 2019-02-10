@@ -1,0 +1,30 @@
+app:
+  name: LogCollectorES
+  code: LCES
+  notify: appz@cloudbourne.co
+
+build:
+  version: 2.9
+  env: DEV
+  build_file: none
+  output_files: output/*.zip
+  image_template: elasticsearch
+  image_name: myco/log-collector-es
+
+deploy:
+  context: myco/DEV
+  replicas: 1
+  port:
+  - 9200
+  - 9300
+
+volumes:
+- claim: elasticsearch-pvc
+  mount: /appz/data
+  name: data
+
+monitor:
+  notify: appzops@cloudbourne.co      
+
+properties:
+  revision : 9
