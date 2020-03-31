@@ -8,23 +8,23 @@ build:
   env: DEV
   build_file: none
   output_files: output/*.zip
-  image_template: elasticsearch
-  image_name: myco/log-collector-es
+  image_template: elasticsearch-5.6
+  image_name: alpha/log-collector-es
 
 deploy:
-  context: myco/DEV
+  context: alpha/DEV
   replicas: 1
   port:
   - 9200
   - 9300
 
 volumes:
-- claim: elasticsearch-pvc
+- claim: elasticsearch-data
   mount: /appz/data
-  name: data
+  name: elasticsearch-data
 
 monitor:
   notify: appzops@cloudbourne.co      
 
 properties:
-  revision : 17
+  revision : 01
