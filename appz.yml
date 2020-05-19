@@ -28,4 +28,4 @@ monitor:
   notify: appzops@cloudbourne.co      
 
 properties:
-  revision : 18
+  revision : 24
