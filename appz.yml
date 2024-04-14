@@ -1,31 +1,31 @@
 app:
-  name: LogCollectorES
-  code: LCES
-  notify: appz@cloudbourne.co
+  name: LogCollectorOS
+  code: LCOS
+  notify: srswain@ecloudcontrol.com
 
 build:
   version: 3.1
   env: DEV
   build_file: none
   output_files: output/*.zip
-  image_template: elasticsearch-6.8
-  image_name: alpha/log-collector-es
+  image_template: opensearch-2.13
+  #image_name: alpha/log-collector-es
 
 deploy:
   context: alpha/DEV
-  type: elasticsearch6  
+  type: opensearch  
   replicas: 1
   port:
   - 9200
   - 9300
 
 volumes:
-- claim: elasticsearch-data
+- claim: opensearch-data
   mount: /appz/data
-  name: elasticsearch-data
+  name: opensearch-data
 
 monitor:
-  notify: appzops@cloudbourne.co      
+  notify: srswain@ecloudcontrol.com      
 
 properties:
-  revision : 25
+  revision : 1
