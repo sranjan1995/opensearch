@@ -13,7 +13,7 @@ build:
 
 deploy:
   context: sranjan1995/DEV
-  type: statefulset 
+  type: opensearch 
   replicas: 1
   port:
   - 9200
@@ -29,3 +29,5 @@ monitor:
 
 properties:
   revision : 2
+  OPENSEARCH_INITIAL_ADMIN_PASSWORD: 
+    VAULT: OPENSEARCH_INITIAL_ADMIN_PASSWORD
