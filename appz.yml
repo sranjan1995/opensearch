@@ -17,6 +17,7 @@ deploy:
   replicas: 1
   port:
   - 9200
+  - 9300
   - 9600
 
 volumes:
