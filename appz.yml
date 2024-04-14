@@ -9,7 +9,7 @@ build:
   build_file: none
   output_files: output/*.zip
   image_template: opensearch-2.13
-  #image_name: alpha/log-collector-es
+  #image_name: sranjan1995/O-collector-es
 
 deploy:
   context: sranjan1995/DEV
