@@ -28,6 +28,6 @@ monitor:
   notify: srswain@ecloudcontrol.com      
 
 properties:
-  revision : 2
+  revision : 3
   OPENSEARCH_INITIAL_ADMIN_PASSWORD: 
     VAULT: OPENSEARCH_INITIAL_ADMIN_PASSWORD
