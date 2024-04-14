@@ -34,3 +34,6 @@ properties:
   revision : 6
   OPENSEARCH_INITIAL_ADMIN_PASSWORD: 
     vault: OPENSEARCH_INITIAL_ADMIN_PASSWORD
+  discovery.type : single-node
+  ENABLE_FLUENTD : 0
+  plugins.security.disabled : true
