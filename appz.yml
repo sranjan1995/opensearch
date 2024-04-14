@@ -23,7 +23,9 @@ volumes:
 - claim: opensearch-data
   mount: /appz/data
   name: opensearch-data
-
+  size: 20Gi
+  mode: ReadWriteOnce
+  class: microk8s-hostpath
 monitor:
   notify: srswain@ecloudcontrol.com      
 
