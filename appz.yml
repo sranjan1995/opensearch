@@ -28,4 +28,4 @@ monitor:
   notify: srswain@ecloudcontrol.com      
 
 properties:
-  revision : 1
+  revision : 2
