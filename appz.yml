@@ -12,12 +12,12 @@ build:
   #image_name: alpha/log-collector-es
 
 deploy:
-  context: alpha/DEV
-  type: opensearch  
+  context: sranjan1995/DEV
+  type: statefulset 
   replicas: 1
   port:
   - 9200
-  - 9300
+  - 9600
 
 volumes:
 - claim: opensearch-data
