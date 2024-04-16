@@ -41,5 +41,5 @@ properties:
   MIN_AGE_WARM : 2d
   MIN_AGE_COLD : 7d
   ENABLE_FLUENTD : 0
-  REPLICA_COUNT : 3
+  REPLICA_COUNT : 5
   plugins.security.disabled : true
