@@ -14,7 +14,7 @@ build:
 deploy:
   context: sranjan1995/DEV
   type: statefulset 
-  replicas: 5
+  replicas: 7
   port:
   - 9200
   - 9300
@@ -41,4 +41,4 @@ properties:
   MIN_AGE_WARM : 2d
   MIN_AGE_COLD : 7d
   ENABLE_FLUENTD : 0
-  REPLICA_COUNT : 5
+  REPLICA_COUNT : 7
