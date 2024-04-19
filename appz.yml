@@ -31,7 +31,7 @@ monitor:
   notify: srswain@ecloudcontrol.com      
 
 properties:
-  revision : 32
+  revision : 33
   OPENSEARCH_INITIAL_ADMIN_PASSWORD: 
     vault: OPENSEARCH_INITIAL_ADMIN_PASSWORD
   NODE_MODE : multi-node
