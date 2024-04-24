@@ -22,7 +22,7 @@ deploy:
 
 volumes:
 - claim: opensearch-data
-  mount: /appz/data
+  mount: /usr/share/opensearch/data
   name: opensearch-data
   size: 20Gi
   mode: ReadWriteOnce
