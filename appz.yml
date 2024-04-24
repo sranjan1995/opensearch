@@ -42,3 +42,4 @@ properties:
   MIN_AGE_COLD : 7d
   ENABLE_FLUENTD : 0
   REPLICA_COUNT : 7
+  ENABLE_METRICS : 1
