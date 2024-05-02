@@ -9,7 +9,6 @@ build:
   build_file: none
   output_files: output/*.zip
   image_template: opensearch-2.13
-  #image_name: sranjan1995/O-collector-es
 
 deploy:
   context: sranjan1995/DEV
@@ -37,9 +36,15 @@ properties:
   NODE_MODE : multi-node
   MAX_RESULT_WINDOW : 10000000
   ENABLE_ILM : 1
-  JAVA_HEAPSIZE : 12g 
+  JAVA_HEAPSIZE : 12g
   MIN_AGE_WARM : 2d
   MIN_AGE_COLD : 7d
   ENABLE_FLUENTD : 0
   REPLICA_COUNT : 3
   ENABLE_METRICS : 1
+  MINIO_BUCKET_NAME : index_snapshot
+  MINIO_ENDPOINT : http://18.118.201.158:9000
+  MINIO_ACCESS_KEY :
+    vault: MINIO_ACCESS_KEY
+  MINIO_SECRET_KEY :
+    vault: MINIO_SECRET_KEY
