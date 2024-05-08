@@ -13,7 +13,7 @@ build:
 deploy:
   context: sranjan1995/DEV
   type: statefulset 
-  replicas: 3
+  replicas: 2
   port:
   - 9200
   - 9300
@@ -36,11 +36,12 @@ properties:
   NODE_MODE : multi-node
   MAX_RESULT_WINDOW : 10000000
   ENABLE_ILM : 1
-  JAVA_HEAPSIZE : 12g
+  #JAVA_HEAPSIZE : 12g
+  JAVA_HEAPSIZE : 4g
   MIN_AGE_WARM : 2d
   MIN_AGE_COLD : 7d
   ENABLE_FLUENTD : 0
-  REPLICA_COUNT : 3
+  REPLICA_COUNT : 2
   ENABLE_METRICS : 1
   MINIO_BUCKET_NAME : index_snapshot
   MINIO_ENDPOINT : http://18.118.201.158:9000
