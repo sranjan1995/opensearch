@@ -13,7 +13,7 @@ build:
 deploy:
   context: sranjan1995/DEV
   type: statefulset 
-  replicas: 2
+  replicas: 3
   port:
   - 9200
   - 9300
@@ -27,21 +27,21 @@ volumes:
   mode: ReadWriteOnce
   class: microk8s-hostpath
 monitor:
-  notify: srswain@ecloudcontrol.com      
+  notify: jjpaul@ecloudcontrol.com      
 
 properties:
-  revision : 79
+  revision : 0
   OPENSEARCH_INITIAL_ADMIN_PASSWORD: 
     vault: OPENSEARCH_INITIAL_ADMIN_PASSWORD
   NODE_MODE : multi-node
   MAX_RESULT_WINDOW : 10000000
   ENABLE_ILM : 1
   #JAVA_HEAPSIZE : 12g
-  JAVA_HEAPSIZE : 4g
+  JAVA_HEAPSIZE : 6g
   MIN_AGE_WARM : 2d
   MIN_AGE_COLD : 7d
   ENABLE_FLUENTD : 0
-  REPLICA_COUNT : 2
+  REPLICA_COUNT : 3
   ENABLE_METRICS : 1
   ENABLE_MINIO_BACKUP : 1
   MINIO_BUCKET_NAME : index-snapshot
