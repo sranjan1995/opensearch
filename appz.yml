@@ -4,16 +4,16 @@ app:
   notify: srswain@ecloudcontrol.com
 
 build:
-  version: 2.13
+  version: 2.19
   env: DEV
   build_file: none
   output_files: output/*.zip
-  image_template: opensearch-2.13
+  image_template: opensearch-2.19
 
 deploy:
   context: sranjan1995/DEV
   type: statefulset 
-  replicas: 3
+  replicas: 1
   port:
   - 9200
   - 9300
@@ -41,7 +41,7 @@ properties:
   MIN_AGE_WARM : 2d
   MIN_AGE_COLD : 7d
   ENABLE_FLUENTD : 0
-  REPLICA_COUNT : 3
+  REPLICA_COUNT : 1
   ENABLE_METRICS : 1
   ENABLE_MINIO_BACKUP : 1
   MINIO_BUCKET_NAME : index-snapshot
