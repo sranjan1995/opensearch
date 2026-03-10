@@ -30,7 +30,7 @@ monitor:
   notify: jjpaul@ecloudcontrol.com      
 
 properties:
-  revision : 4
+  revision : 5
   OPENSEARCH_INITIAL_ADMIN_PASSWORD: 
     vault: OPENSEARCH_INITIAL_ADMIN_PASSWORD
   NODE_MODE : multi-node
